@@ -26,3 +26,18 @@ CREATE TABLE tokens(
     revoked BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
 );
+
+/* Foods Delivery */
+
+CREATE TABLE tipos_produto(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE produtos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    id_tipo_produto INT NOT NULL,
+    FOREIGN KEY (id_tipo_produto) REFERENCES tipos_produto(id) ON DELETE CASCADE
+);
