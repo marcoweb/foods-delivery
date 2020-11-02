@@ -1,0 +1,26 @@
+<?php
+$_template = 'dashboard';
+?>
+<br />
+<p><a class="btn btn-success" href="/tipo_produto/insert">Adicionar Tipo de Produto</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($tipos_produto as $tp): ?>
+        <tr>
+            <td><?= $tp['id'] ?></td>
+            <td><?= $tp['nome'] ?></td>
+            <td>
+                <a class="btn btn-primary" href="/tipo_produto/update/<?= $tp['id'] ?>">Editar</a> | 
+                <a class="btn btn-danger" href="/tipo_produto/delete/<?= $tp['id'] ?>">Excluir</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
