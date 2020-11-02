@@ -5,7 +5,7 @@ foreach (selectProdutos() as $p) {
     if(array_key_exists($t, $produtos)) {
         $produtos[$p['tipo_plural']] = [];
     }
-    $produtos[$p['tipo']][] = $p;
+    $produtos[$p['tipo_plural']][] = $p;
 }
 ?>
 

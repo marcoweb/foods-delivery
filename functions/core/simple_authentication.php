@@ -4,6 +4,7 @@ loadFunctions('core/database');
 const SECRET_KEY = '4{?b/nvmFxjWf/Lo4+)VR~n4ME(.i,JHw&2a~<vfGhF5?*|eNKqjv?ab`EGyVxHr';
 const LOGIN_FORM = '/auth/login';
 const USER_SELF_REGISTER = FALSE;
+const LOGGED_HOME = '/admin/dashboard';
 
 function generateToken($email) {
     $date = new Datetime();

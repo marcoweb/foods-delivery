@@ -5,7 +5,7 @@ function login_get() {
 
 function login_post($email = null, $password = null) {
     if(openSession($email, $password)) {
-        redirectTo(HOME_PAGE);
+        redirectTo(LOGGED_HOME);
     } else {
         redirectTo(LOGIN_FORM);
     }
@@ -13,5 +13,5 @@ function login_post($email = null, $password = null) {
 
 function logout_get() {
     logout();
-    redirectTo(LOGIN_FORM);
+    redirectTo(HOME_PAGE);
 }

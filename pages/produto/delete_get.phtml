@@ -1,0 +1,10 @@
+<?php
+$_template = 'dashboard';
+?>
+<br />
+<p>Tem certeza que deseja remover o produto "<?= $produto['nome'] ?>" ?</p>
+<form action="/produto/delete" method="post">
+  <input type="hidden" name="id" value="<?= $produto['id'] ?>" />
+  <a class="btn btn-primary" href="/produto/list">Voltar</a>
+  <button type="submit" class="btn btn-danger">Excluir</button>
+</form>

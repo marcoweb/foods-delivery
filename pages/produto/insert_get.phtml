@@ -1,0 +1,23 @@
+<?php
+$_template = 'dashboard';
+?>
+<br />
+<form action="/produto/insert" method="post">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" name="nome" placeholder="Nome do Produto">
+  </div>
+  <div class="form-group">
+    <label for="preco">Peço</label>
+    <input type="number" step="0.01" class="form-control" name="preco" placeholder="Peço do Produto">
+  </div>
+  <div class="form-group">
+    <label for="id_tipo_produto">Tipo</label>
+    <select name="id_tipo_produto" class="form-control">
+    <?php foreach($tipos_produto as $tp): ?>
+        <option value="<?= $tp['id'] ?>"><?= $tp['nome'] ?></option>
+    <?php endforeach; ?>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-success">Salvar</button>
+</form>

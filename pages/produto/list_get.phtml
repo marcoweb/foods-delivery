@@ -1,0 +1,30 @@
+<?php
+$_template = 'dashboard';
+?>
+<br />
+<p><a class="btn btn-success" href="/produto/insert">Adicionar Produto</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Tipo de Produto</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($produtos as $p): ?>
+        <tr>
+            <td><?= $p['id'] ?></td>
+            <td><?= $p['nome'] ?></td>
+            <td><?= $p['preco'] ?></td>
+            <td><?= $p['tipo'] ?></td>
+            <td>
+                <a class="btn btn-primary" href="/produto/update/<?= $p['id'] ?>">Editar</a> | 
+                <a class="btn btn-danger" href="/produto/delete/<?= $p['id'] ?>">Excluir</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
