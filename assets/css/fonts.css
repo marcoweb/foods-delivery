@@ -1,0 +1,280 @@
+
+/*
+*
+* ICONES E OQ FAZ ELES.
+* --------------------------------------------------
+*/
+@font-face {
+	font-family: "Material Design Icons";
+	src: url("../fonts/materialdesignicons-webfont.eot?v=1.4.57");
+	src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=1.4.57") format("embedded-opentype"), url("../fonts/materialdesignicons-webfont.woff2?v=1.4.57") format("woff2"), url("../fonts/materialdesignicons-webfont.woff?v=1.4.57") format("woff"), url("../fonts/materialdesignicons-webfont.ttf?v=1.4.57") format("truetype"), url("../fonts/materialdesignicons-webfont.svg?v=1.4.57#materialdesigniconsregular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.mdi {
+	display: inline-block;
+	font: normal normal normal 24px/1 "Material Design Icons";
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+}
+
+.mdi-arrow-all:before {
+	content: "\f13f";
+}
+
+.mdi-arrow-bottom-drop-circle:before {
+	content: "\f140";
+}
+
+.mdi-arrow-bottom-left:before {
+	content: "\f141";
+}
+
+.mdi-arrow-bottom-right:before {
+	content: "\f142";
+}
+
+.mdi-arrow-collapse:before {
+	content: "\f143";
+}
+
+.mdi-arrow-down:before {
+	content: "\f144";
+}
+
+.mdi-arrow-down-bold:before {
+	content: "\f145";
+}
+
+.mdi-arrow-down-bold-circle:before {
+	content: "\f146";
+}
+
+.mdi-arrow-down-bold-circle-outline:before {
+	content: "\f147";
+}
+
+.mdi-arrow-down-bold-hexagon-outline:before {
+	content: "\f148";
+}
+
+.mdi-arrow-expand:before {
+	content: "\f149";
+}
+
+.mdi-arrow-left:before {
+	content: "\f14a";
+}
+
+.mdi-arrow-left-bold:before {
+	content: "\f14b";
+}
+
+.mdi-arrow-left-bold-circle:before {
+	content: "\f14c";
+}
+
+.mdi-arrow-left-bold-circle-outline:before {
+	content: "\f14d";
+}
+
+.mdi-arrow-left-bold-hexagon-outline:before {
+	content: "\f14e";
+}
+
+.mdi-arrow-right:before {
+	content: "\f14f";
+}
+
+.mdi-arrow-right-bold:before {
+	content: "\f150";
+}
+
+.mdi-arrow-right-bold-circle:before {
+	content: "\f151";
+}
+
+.mdi-arrow-right-bold-circle-outline:before {
+	content: "\f152";
+}
+
+.mdi-arrow-right-bold-hexagon-outline:before {
+	content: "\f153";
+}
+
+.mdi-arrow-top-left:before {
+	content: "\f154";
+}
+
+.mdi-arrow-top-right:before {
+	content: "\f155";
+}
+
+.mdi-arrow-up:before {
+	content: "\f156";
+}
+
+.mdi-arrow-up-bold:before {
+	content: "\f157";
+}
+
+.mdi-arrow-up-bold-circle:before {
+	content: "\f158";
+}
+
+.mdi-arrow-up-bold-circle-outline:before {
+	content: "\f159";
+}
+
+.mdi-arrow-up-bold-hexagon-outline:before {
+	content: "\f15a";
+}
+
+
+.mdi-map:before {
+	content: "\f43f";
+}
+
+.mdi-map-marker:before {
+	content: "\f440";
+}
+
+.mdi-map-marker-circle:before {
+	content: "\f441";
+}
+
+.mdi-map-marker-multiple:before {
+	content: "\f442";
+}
+
+.mdi-map-marker-off:before {
+	content: "\f443";
+}
+
+.mdi-map-marker-radius:before {
+	content: "\f444";
+}
+
+.mdi-phone:before {
+	content: "\f4e1";
+}
+
+.mdi-phone-bluetooth:before {
+	content: "\f4e2";
+}
+
+.mdi-phone-forward:before {
+	content: "\f4e3";
+}
+
+.mdi-phone-hangup:before {
+	content: "\f4e4";
+}
+
+.mdi-phone-in-talk:before {
+	content: "\f4e5";
+}
+
+.mdi-phone-incoming:before {
+	content: "\f4e6";
+}
+
+.mdi-phone-locked:before {
+	content: "\f4e7";
+}
+
+.mdi-phone-log:before {
+	content: "\f4e8";
+}
+
+.mdi-phone-missed:before {
+	content: "\f4e9";
+}
+
+.mdi-phone-outgoing:before {
+	content: "\f4ea";
+}
+
+.mdi-phone-paused:before {
+	content: "\f4eb";
+}
+
+.mdi-phone-settings:before {
+	content: "\f4ec";
+}
+
+.mdi-phone-voip:before {
+	content: "\f4ed";
+}
+.mdi-facebook:before {
+	content: "\f301";
+}
+
+.mdi-facebook-box:before {
+	content: "\f302";
+}
+
+.mdi-facebook-messenger:before {
+	content: "\f303";
+}
+
+.mdi-instagram:before {
+	content: "\f3f1";
+}
+
+.mdi-instapaper:before {
+	content: "\f3f2";
+}
+
+.mdi-twitter:before {
+	content: "\f631";
+}
+
+.mdi-twitter-box:before {
+	content: "\f632";
+}
+
+.mdi-twitter-circle:before {
+	content: "\f633";
+}
+
+.mdi-twitter-retweet:before {
+	content: "\f634";
+}
+@font-face {
+	font-family: 'Linearicons';
+	font-weight: normal;
+	font-style: normal;
+	src: url(../fonts/Linearicons.eot);
+	/* For IE6-8 */
+	src: local("Linearicons"), local("Linearicons"), url(../fonts/Linearicons.woff) format("woff"), url(../fonts/Linearicons.ttf) format("truetype");
+}
+.linearicons,
+[class^="linearicons-"], [class*=" linearicons-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'Linearicons' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.linearicons-hamburger:before {
+	content: "\eb1a";
+}
+/*fontface*/
+@font-face {
+	font-family: "Asfalto";
+	src: url("../fonts/fernandoforero-asfalto.eot"), url("../fonts/fernandoforero-asfalto.otf") format("otf"), url("../fonts/fernandoforero-asfalto.eot") format("eot"), url("../fonts/fernandoforero-asfalto.svg") format("svg"), url("../fonts/fernandoforero-asfalto.ttf") format("truetype"), url("../fonts/fernandoforero-asfalto.woff") format("woff"), url("../fonts/fernandoforero-asfalto.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+

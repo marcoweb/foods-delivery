@@ -7,10 +7,10 @@ INSERT INTO users_has_roles(id_user, id_role) VALUES (1,2);
 INSERT INTO users_has_roles(id_user, id_role) VALUES (2,2);
 
 /* Foods Delivery */
-INSERT INTO tipos_produto(id, nome) VALUES
-    (1, 'Lanche'),
-    (2, 'Bebida'),
-    (3, 'Porção');
+INSERT INTO tipos_produto(id, nome, nome_pural) VALUES
+    (1, 'Lanche', 'Lanches'),
+    (2, 'Bebida', 'Bebidas'),
+    (3, 'Porção', 'Porções');
 
 INSERT INTO produtos (id, nome, preco, id_tipo_produto) VALUES
     (1, 'X-Tudo', '12.00', 1),

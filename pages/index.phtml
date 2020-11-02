@@ -1,1 +1,35 @@
-<h1>Bem Vindo</h1>
+<?php
+loadFunctions('repositories/produtos');
+$produtos = [];
+foreach (selectProdutos() as $p) {
+    if(array_key_exists($t, $produtos)) {
+        $produtos[$p['tipo']] = [];
+    }
+    $produtos[$p['tipo']][] = $p;
+}
+?>
+
+<!-- TITULO CARDAPIO-->
+      <section class="section section-md bg-default">
+        <div class="container">
+          <?php foreach ($produtos as $t => $i): ?>
+          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown"><?= $t ?></span></h3>
+          <div class="row row-md row-30">
+            <?php foreach ($i as $p): ?>
+            <div class="col-sm-6 col-lg-4">
+              <div class="oh-desktop">
+                <!-- FOTOS MENU -->
+                <article class="services-terri wow slideInUp">
+                  <div class="services-terri-figure"><img src="/assets/images/menu-1-370x278.jpg" alt="" width="370" height="278"/>
+                  </div>
+                  <div class="services-terri-caption"><span class="services-terri-icon linearicons-hamburger"></span>
+                    <h5 class="services-terri-title"><a href="cardapio.php"><?= $p['nome'] ?></a></h5>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <?php endforeach; ?>
+          </div>
+        <?php endforeach; ?>
+        </div>
+      </section>
