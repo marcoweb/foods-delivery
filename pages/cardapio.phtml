@@ -23,7 +23,8 @@ foreach (selectProdutos() as $p) {
                   <div class="services-terri-figure"><img src="/assets/images/menu-1-370x278.jpg" alt="" width="370" height="278"/>
                   </div>
                   <div class="services-terri-caption"><span class="services-terri-icon linearicons-hamburger"></span>
-                    <h5 class="services-terri-title"><a href="cardapio.php"><?= $p['nome'] ?></a></h5>
+                    <h5 class="services-terri-title"><a href=""><?= $p['nome'] ?></a></h5>
+                    <a class="btn btn-primary" href="/pedido/additem/<?= $p['id']?>" class="card-link">Comprar</a>
                   </div>
                 </article>
               </div>

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card mt-5">
+       <div class="card-body">
+          <h4 class="card-title">Pedido</h4>
+          <a href="/page/cardapio">Lista de Produtos</a>
+        </div>
+    </div>
+    <table class="table table-strip">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Observação</th>
+                <th>Preço</th>
+                <th>Subtotal</th>
+                <th>&nbsp;</th>
+
+            </tr>       
+        </thead>
+        <tbody>
+        <?php foreach($itens_pedido as $i): ?>
+            <tr>
+                <td><?= $i['nome'] ?></td>
+                <td><?= $i['quantidade'] ?></td>
+                <td><?= $i['oservacao'] ?></td>
+                <td><?= $i['preco'] ?></td>
+                <td>
+                    <a href="/pedido/removeitem/<?= $i['id'] ?>" class="btn btn-danger">Remover</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+            <tr>
+                <td colspan="3" class="text-right"><b>Total: </b></td>
+                <td>R$<?php echo number_format($totalCarts, 2, ',', '.')?></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

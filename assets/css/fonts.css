@@ -273,7 +273,7 @@
 /*fontface*/
 @font-face {
 	font-family: "Asfalto";
-	src: url("../fonts/fernandoforero-asfalto.eot"), url("../fonts/fernandoforero-asfalto.otf") format("otf"), url("../fonts/fernandoforero-asfalto.eot") format("eot"), url("../fonts/fernandoforero-asfalto.svg") format("svg"), url("../fonts/fernandoforero-asfalto.ttf") format("truetype"), url("../fonts/fernandoforero-asfalto.woff") format("woff"), url("../fonts/fernandoforero-asfalto.woff2") format("woff2");
+	src: url("../fonts/FernandoForero-Asfalto.eot"), url("../fonts/FernandoForero-Asfalto.otf") format("otf"), url("../fonts/FernandoForero-Asfalto.eot") format("eot"), url("../fonts/FernandoForero-Asfalto.svg") format("svg"), url("../fonts/FernandoForero-Asfalto.ttf") format("truetype"), url("../fonts/FernandoForero-Asfalto.woff") format("woff"), url("../fonts/FernandoForero-Asfalto.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
