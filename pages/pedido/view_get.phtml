@@ -1,3 +1,7 @@
+<?php
+$subtotal = [];
+?>
+
 <div class="container">
     <div class="card mt-5">
        <div class="card-body">
@@ -5,35 +9,40 @@
           <a href="/page/cardapio">Lista de Produtos</a>
         </div>
     </div>
-    <table class="table table-strip">
-        <thead>
-            <tr>
-                <th>Produto</th>
-                <th>Quantidade</th>
-                <th>Observação</th>
-                <th>Preço</th>
-                <th>Subtotal</th>
-                <th>&nbsp;</th>
+    <form action="/pedido/update" method="post">
+        <table class="table table-strip">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Subtotal</th>
+                    <th>&nbsp;</th>
 
-            </tr>       
-        </thead>
-        <tbody>
-        <?php foreach($itens_pedido as $i): ?>
-            <tr>
-                <td><?= $i['nome'] ?></td>
-                <td><?= $i['quantidade'] ?></td>
-                <td><?= $i['oservacao'] ?></td>
-                <td><?= $i['preco'] ?></td>
-                <td>
-                    <a href="/pedido/removeitem/<?= $i['id'] ?>" class="btn btn-danger">Remover</a>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-            <tr>
-                <td colspan="3" class="text-right"><b>Total: </b></td>
-                <td>R$<?php echo number_format($totalCarts, 2, ',', '.')?></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+                </tr>       
+            </thead>
+            <tbody>
+                <?php foreach($itens_pedido as $k => $i): ?>
+                <tr>
+                    <td><?= $i['nome'] ?></td>
+                    <td><input type="number" name="prod_qtd__<?= $k ?>" value="<?= $i['quantidade'] ?>" /></td>
+                    <td>R$ <?= $i['preco'] ?></td>
+                    <td>R$ <?php $subtotal[$k] = $i['preco'] * $i['quantidade']; echo number_format($subtotal[$k], 2, ',', '.') ?></td>
+                    <td>
+                        <a href="/pedido/removeitem/<?= $k ?>" class="btn btn-danger">Remover</a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                <tr>
+                    <td colspan="3" class="text-right"><b>Total: </b></td>
+                    <td>R$<?= number_format(array_sum($subtotal), 2, ',', '.')?></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" type="submit">Atualizar Carrinho</button>
+        <a href="/pedido/fechar">Fechar</a>
+    </form>
 </div>
+
+<br />
