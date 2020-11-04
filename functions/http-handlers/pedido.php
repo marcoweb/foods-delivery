@@ -1,5 +1,5 @@
 <?php
-const TO_EMAIL = 'xxxxxxxxxx@xxxxxxx.com';
+const TO_EMAIL = 'marcocarvalho.web@gmail.com';
 
 function view_get() {
     if (session_status() == PHP_SESSION_NONE) {

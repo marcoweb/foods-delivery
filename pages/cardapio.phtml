@@ -2,7 +2,7 @@
 loadFunctions('repositories/produtos');
 $produtos = [];
 foreach (selectProdutos() as $p) {
-    if(array_key_exists($t, $produtos)) {
+    if(array_key_exists($p, $produtos)) {
         $produtos[$p['tipo_plural']] = [];
     }
     $produtos[$p['tipo_plural']][] = $p;
