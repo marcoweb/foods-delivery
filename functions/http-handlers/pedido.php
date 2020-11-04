@@ -1,5 +1,6 @@
 <?php
-const TO_EMAIL = 'xxxxx@xxxx.com';
+const TO_EMAIL = 'xxxxxxxxxx@xxxxxxx.com';
+
 function view_get() {
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
@@ -69,6 +70,9 @@ function enviar_post($cliente, $email, $endereco, $telefone, $pedido, $observaco
     $msg .= $pedido;
     $msg .= "\n[ Informações Adicionais ]\n";
     $msg .= $observacoes;
-    mail(TO_EMAIL, 'Pedido - ' . $cliente, $msg);
-    return view(['msg' => $msg]);
+    if(mail(TO_EMAIL, 'Pedido - ' . $cliente, $msg)) {
+        return view(['msg' => $msg]);
+    } else {
+        redirectTo('/pedido/fechar');
+    }
 }
