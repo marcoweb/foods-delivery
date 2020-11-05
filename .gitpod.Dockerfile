@@ -10,7 +10,3 @@ RUN apt-get update \
  && chmod 777 /var/spool/mqueue-client \
  && chmod 777 /var/spool/mail \
  && cat /etc/hostname > /etc/hosts
-
-RUN sed -i '/#!\/bin\/sh/aservice sendmail restart' /usr/local/bin/docker-php-entrypoint
-
-RUN sed -i '/#!\/bin\/sh/aecho "$(hostname -i)\t$(hostname) $(hostname).localhost" >> /etc/hosts' /usr/local/bin/docker-php-entrypoint
