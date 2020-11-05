@@ -20,6 +20,10 @@ date_default_timezone_set('America/Sao_Paulo');
 $_requestInfo = [];
 $_response = '';
 
+function url($url) {
+    return str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__) . '/' . trim($url, '/');
+}
+
 function loadFunctions($name) {
     $_functions_file_path = PATH_FUNCTIONS . '/' . $name . '.php';
     if(file_exists($_functions_file_path)) {

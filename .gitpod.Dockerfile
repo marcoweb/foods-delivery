@@ -8,4 +8,5 @@ RUN apt-get update \
  && chmod 2555 /usr/lib/sm.bin/sendmail \
  && chmod 777 /var/spool/mqueue \
  && chmod 777 /var/spool/mqueue-client \
- && chmod 777 /var/spool/mail
+ && chmod 777 /var/spool/mail \
+ && cat /etc/hostname > /etc/hosts

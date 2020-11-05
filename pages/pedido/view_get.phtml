@@ -40,8 +40,11 @@ $subtotal = [];
                 </tr>
             </tbody>
         </table>
+        <?php if(count($itens_pedido) > 0): ?>
+        <a class="btn btn-info" href="<?= url('page/cardapio') ?>">Continuar comprando</a>
         <button class="btn btn-primary" type="submit">Atualizar Carrinho</button>
-        <a href="/pedido/fechar">Fechar</a>
+        <a class="btn btn-info" href="<?= url('/pedido/fechar') ?>">Realizar Pedido</a>
+        <?php endif ?>
     </form>
 </div>
 
