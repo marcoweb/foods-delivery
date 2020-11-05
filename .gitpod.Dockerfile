@@ -25,6 +25,7 @@ RUN echo "AuthPass="${GMAIL_PASSWORD} >> /etc/ssmtp/ssmtp.conf
 RUN echo "UseTLS=YES" >> /etc/ssmtp/ssmtp.conf
 RUN echo "UseSTARTTLS=YES" >> /etc/ssmtp/ssmtp.conf
 
+RUN adduser gitpod mail
 
 # Set up php sendmail config
 # RUN echo "sendmail_path=sendmail -i -t" >> /usr/local/etc/php/conf.d/php-sendmail.ini
