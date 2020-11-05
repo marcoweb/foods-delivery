@@ -19,12 +19,12 @@ RUN echo "root=yourAdmin@email.com" >> /etc/ssmtp/ssmtp.conf
 
 # Here is the gmail configuration (or change it to your private smtp server)
 RUN echo "mailhub=smtp.gmail.com:587" >> /etc/ssmtp/ssmtp.conf
-RUN echo "AuthUser=${GMAIL_ACCOUNT}" >> /etc/ssmtp/ssmtp.conf
-RUN echo "AuthPass=${GMAIL_PASSWORD}" >> /etc/ssmtp/ssmtp.conf
+RUN echo "AuthUser="${GMAIL_ACCOUNT} >> /etc/ssmtp/ssmtp.conf
+RUN echo "AuthPass="${GMAIL_PASSWORD} >> /etc/ssmtp/ssmtp.conf
 
 RUN echo "UseTLS=YES" >> /etc/ssmtp/ssmtp.conf
 RUN echo "UseSTARTTLS=YES" >> /etc/ssmtp/ssmtp.conf
 
 
 # Set up php sendmail config
-RUN echo "sendmail_path=sendmail -i -t" >> /usr/local/etc/php/conf.d/php-sendmail.ini
+# RUN echo "sendmail_path=sendmail -i -t" >> /usr/local/etc/php/conf.d/php-sendmail.ini
